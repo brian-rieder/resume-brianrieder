@@ -1,3 +1,4 @@
+%!TEX program = xelatex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Author: Brian Patrick Rieder (http://brianrieder.com)
 %
@@ -7,7 +8,7 @@
 % CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 %
 % Important notes:
-% This template needs to be compiled with XeLaTeX.
+% This template needs to be compiled with XeLaTeX. The pseudo-shebang accomplishes this.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -44,7 +45,7 @@
 Expected Graduation: May 2017}
 College of Engineering \\
 Dean's List (All Semesters) \\
-\textbf{Cum. GPA: 3.65 / 4.0}
+\textbf{Cum. GPA: 3.64 / 4.0}
 
 \sectionspace % Some whitespace after the section
 
@@ -76,9 +77,9 @@ LinkedIn:// \href{https://www.linkedin.com/in/debarghyadas}{\bf Brian Rieder}
 \subsection{Programming}
 
 \location{Over 5000 lines:}
-C \textbullet{} Shell \textbullet{} JavaScript \textbullet{} PHP \\
+C \textbullet{} Shell \textbullet{} JavaScript \textbullet{} PHP \textbullet{} Python \\
 \location{Over 1000 lines:}
-MSSQL \textbullet{} Python \textbullet{} HTML/CSS \textbullet{} Assembly \\
+MySQL \textbullet{} PostgreSQL \textbullet{} MSSQL HTML/CSS \textbullet{} Assembly \\
 \location{Familiar:}
 Ruby \textbullet{} Matlab \textbullet{} Android \textbullet{} \LaTeX\ \\
 \location{Introductory Knowledge:}
@@ -140,30 +141,36 @@ Advanced C Programming
 
 \location{August 2013 - August 2016 (Rotational) | Grand Rapids, MI}
 
+% Spotfire Dashboard
+\descript{Analytics Research and Solutions Engineer}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightitemize}
+\item  Generated, validated, and provided datasets to quantify and indicate \textbf{First Time Yield}, Nonconformances, Scrap and Rework, and Out of Box Failures to be reported via \textbf{Spotfire} visualization dashboards.
+\item Identified issues within Electronics Value Stream sites' data schemas and prescribed solutions that ranged from directly addressing processes to manually compiling reports or \textbf{PostgreSQL} queries to rectify data.
+\end{tightitemize}
+
 % ACME Development
 \descript{Advanced Common Modeling Environment (ACME) Web Developer}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightitemize}
 \item Created a web based interface for users to interact with an Enterprise Architect driven database.
 \item Increased autonomy of data entry processes and diagram creation for customer presentation through user of \textbf{jQueryUI} and \textbf{yFiles} libraries in \textbf{Javascript}.
-\item Back-end server and database interfacing with \textbf{PHP} and \textbf{MSSQL} to retrieve, 
-update, and delete entries from tables with minimal user interaction.
+\item Implemented back-end server and database interfacing with \textbf{PHP} and \textbf{MSSQL} to retrieve, update, and delete entries from tables with minimal user interaction.
 \end{tightitemize}
 
 % PAS Engineering
 \descript{Platform Architecture Study Lead Sub-section Engineer}
 \begin{tightitemize}
-\item Lead modeling design engineer on the Platform Architecture Study Internal Research and Development (IRAD) team working to create a model to migrate future era business jets from a federated platform to a General Electric designed \textbf{Integrated Modular Architecture (IMA)}. 
-\item Led model contribution for assigned subsections of the general purpose business jet model to be delivered to \textbf{Dassault Systèmes} and \textbf{Gulfstream Aerospace}.
-\item Oversaw the creation and analysis of ATA 100 defined subsystems 26, 28, and 38: \textbf{Fire Protection, Fuel System, and Water and Waste}.
-\item Performed functional decomposition, electrical hardware analysis, and software partitioning for input/output allocation to the underlying IMA.
+\item Led modeling efforts on the Platform Architecture Study Internal Research and Development (IRAD) team working to create a model to migrate future era business jets from a federated platform to a General Electric designed \textbf{Integrated Modular Architecture (IMA)}. 
+%\item Led model contribution for assigned subsections of the general purpose business jet model to be delivered to \textbf{Dassault Systèmes} and \textbf{Gulfstream Aerospace}.
+\item Created the model of and performed functional decomposition, software partitioning, and electrical hardware analysis of ATA 100 defined subsystems 26, 28, and 38: \textbf{Fire Protection, Fuel System, and Water and Waste}.
+%\item Performed functional decomposition, electrical hardware analysis, and software partitioning for input/output allocation to the underlying IMA.
 \end{tightitemize}
 
 % P-8 FMS Engineering
 \descript{P-8 Poseidon Flight Management Systems Engineer}
 \begin{tightitemize}
-\item Contributed to the design of the P-8A, P-8I, and P-8AAS flight management systems.
-\item Acted as a fully functional \textbf{Systems Engineer} and performed \textbf{Verification and Validation Testing}.
+%\item Contributed to the design of the P-8A, P-8I, and P-8AAS flight management systems.
+\item Acted as a fully functional \textbf{Systems Engineer} and performed \textbf{Verification and Validation Testing} for the design of the P-8A, P-8I, and P-8AAS flight management systems.
 \item Utilized \textbf{Ada} programming application to \textbf{embedded systems} and scripted AutoTest execution with \textbf{Visual Basic}.
 \end{tightitemize}
 
@@ -195,12 +202,12 @@ update, and delete entries from tables with minimal user interaction.
 \descript{| Undergraduate Teaching Assistant}
 
 \location{May 2014 – December 2015 | West Lafayette, IN}
-\begin{tightitemize}
-\item Reconstructed the course grading back-end through utilization of a university server to instantaneously pull, grade, and email results upon receiving submissions using \textbf{Bash}.
-%\item Instantaneously pulled from a submission respository, graded the assignment, and emailed feedback to the submitting student using Bash.
-\item Assisted Dr. Alexander Quinn and Dr. Yung-Hsiang Lu in course administration and oversaw grading as well as lab hours.
-\end{tightitemize}
-% Led the development of a reconstructed back-end for the class through utilization of a university surver to instantaneously pull from a submission repository, grade an assignment, and email feedback to a student using Bash. Assisted \textbf{Dr. Alexander Quinn} and \textbf{Dr. Yung-Hsiang Lu} in course administration and oversaw grading as well as lab hours.
+% \begin{tightitemize}
+% \item Reconstructed the course grading back-end through utilization of a university server to instantaneously pull, grade, and email results upon receiving submissions using \textbf{Bash}.
+% %\item Instantaneously pulled from a submission respository, graded the assignment, and emailed feedback to the submitting student using Bash.
+% %\item Assisted Dr. Alexander Quinn and Dr. Yung-Hsiang Lu in course administration and oversaw grading as well as lab hours.
+% \end{tightitemize}
+% % Led the development of a reconstructed back-end for the class through utilization of a university surver to instantaneously pull from a submission repository, grade an assignment, and email feedback to a student using Bash. Assisted \textbf{Dr. Alexander Quinn} and \textbf{Dr. Yung-Hsiang Lu} in course administration and oversaw grading as well as lab hours.
 
 \sectionspace % Some whitespace after the section
 
