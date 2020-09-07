@@ -1,218 +1,247 @@
-%!TEX program = xelatex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Author: Brian Patrick Rieder (http://brianrieder.com)
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
 %
-% Heavily based on original resume by Debarghya Das (http://www.debarghyadas.com)
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
 %
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
 %
-% Important notes:
-% This template needs to be compiled with XeLaTeX. The pseudo-shebang accomplishes this.
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[letterpaper]{deedy-resume} % Use US Letter paper, change to a4paper for A4 
 
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	TITLE SECTION
-%----------------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \namesection{Brian}{Rieder}{
-\urlstyle{same}\url{http://brianrieder.com} \\ 
-\href{mailto:brieder@purdue.edu}{brieder@purdue.edu} | 574.309.0766 
+\urlstyle{same}\url{zepski.net} | \urlstyle{same}\url{github.com/brian-rieder} \\ 
+\href{mailto:brian@zepski.net}{brian@zepski.net} | 574.309.0766 
 }
 
-%----------------------------------------------------------------------------------------
-%	LEFT COLUMN
-%----------------------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{minipage}[t]{0.33\textwidth} % The left column takes up 33% of the text width of the page
+%\begin{minipage}[t]{0.33\textwidth} 
 
-%------------------------------------------------
-% Education
-%------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Education} 
 
-\subsection{Purdue University}
+\runsubsection{Michigan State University}
+\descript{| MS in Computer Science%}
+| \textbf{Cumulative GPA: 3.57 / 4.0}}
+\location{East Lansing, Michigan 
+| Graduation: May 2020
+| College of Engineering}
+\sectionsep
 
+\runsubsection{Purdue University}
+\descript{| BS in Computer Engineering%}
+| \textbf{Cumulative GPA: 3.69 / 4.0}}
+\location{West Lafayette, Indiana 
+| Graduated: May 2017
+| College of Engineering
+| Dean's List (All Semesters)}
 
-\descript{BS in Computer Engineering}
-\location{West Lafayette, Indiana \\ 
-Expected Graduation: May 2017}
-College of Engineering \\
-Dean's List (All Semesters) \\
-\textbf{Cum. GPA: 3.64 / 4.0}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\sectionspace % Some whitespace after the section
+%\section{Notable Coursework}
+%\subsection{Graduate}
+%Distributed Systems \textbullet{}
+%Full-Stack Web Design \textbullet{}
+%Wireless Communication and Security \textbullet{}
+%Theory and Design of Algorithms \textbullet{}
+%Evolutionary Computing
+%\sectionsep
 
-%------------------------------------------------
+%\subsection{Undergraduate}
 
-\subsection{Penn High School}
+%Data Structures and Algorithms \\
+%Functional Programming \\
+%Object Oriented Programming \\
+%Unix Tools and Scripting \\
+%Microprocessor Interfacing \\
+%{\footnotesize \textit{\textbf{Research Assistant}}} \\
+%Cloud-based Programming Interfaces \\
+%{\footnotesize \textit{\textbf{Teaching Assistant}}} \\
+%Advanced C Programming \\
 
-\location{Grad. May 2012 | Mishawaka, Indiana}
-
-\sectionspace % Some whitespace after the section
-
-%------------------------------------------------
-% Links
-%------------------------------------------------
-
-\section{Links} 
-
-Github:// \href{https://github.com/brian-rieder}{\bf brian-rieder} \\
-LinkedIn:// \href{https://www.linkedin.com/in/debarghyadas}{\bf Brian Rieder} 
-
-\sectionspace % Some whitespace after the section
-
-%------------------------------------------------
-% Skills
-%------------------------------------------------
-
-\section{Skills}
-
-\subsection{Programming}
-
-\location{Over 5000 lines:}
-C \textbullet{} Shell \textbullet{} JavaScript \textbullet{} PHP \textbullet{} Python \\
-\location{Over 1000 lines:}
-MySQL \textbullet{} PostgreSQL \textbullet{} MSSQL HTML/CSS \textbullet{} Assembly \\
-\location{Familiar:}
-Ruby \textbullet{} Matlab \textbullet{} Android \textbullet{} \LaTeX\ \\
-\location{Introductory Knowledge:}
-Ada \textbullet{} Java \textbullet{} Visual Basic \textbullet{} Haskell \textbullet{} Scala
-
-\sectionspace % Some whitespace after the section
-
-%------------------------------------------------
-% Coursework
-%------------------------------------------------
-
-\section{Coursework}
-
-\subsection{Undergraduate}
-
-Data Structures and Algorithms \\
-Functional Programming \\
-Object Oriented Programming \\
-Unix Tools and Scripting \\
-Microprocessor Interfacing \\
-{\footnotesize \textit{\textbf{Research Assistant}}} \\
-Cloud-based Programming Interfaces \\
-{\footnotesize \textit{\textbf{Teaching Assistant}}} \\
-Advanced C Programming
-
-\sectionspace % Some whitespace after the section
-
-%------------------------------------------------
-% Activities
-%------------------------------------------------
-
-\section{Activities} 
-\textbullet{} Eagle Scout in the Boy Scouts of America \\ 
-\textbullet{} Eta Kappa Nu (HKN) ECE Honor Society  \\
-\textbullet{} Five Session Co-op in the Professional Practice Organization \\
-\textbullet{} Member of the Electrical and Computer Engineering Student Society
-
-\sectionspace % Some whitespace after the section
-
-%----------------------------------------------------------------------------------------
-
-\end{minipage} % The end of the left column
-\hfill
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%----------------------------------------------------------------------------------------
-%	RIGHT COLUMN
-%----------------------------------------------------------------------------------------
+%     COLUMN TWO
 %
-\begin{minipage}[t]{0.66\textwidth} % The right column takes up 66% of the text width of the page
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%------------------------------------------------
-% Experience
-%------------------------------------------------
+%\end{minipage} 
+%\hfill
+%\begin{minipage}[t]{0.66\textwidth} 
 
-\section{Industry Experience}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\runsubsection{General Electric Aviation}
-\descript{| Infra-Engineering Co-op/Intern}
+\section{Experience}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% EDISON %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\runsubsection{GE Aviation Systems}
+\descript{| Edison Engineering Development Program }
+
+% TSN
+\descript{Time-Sensitive Networking Switch Application Developer}
+\location{January 2020 - Present | Grand Rapids, MI}
+\begin{tightemize}
+\item Devised a Python-based implementation of IEEE standards for Time-Sensitive Networking (TSN) and Precision Time Protocol (PTP) for use on next-generation avionics switches.
+\item Created a C-based interface application to expose Broadcom-proprietary embedded API calls to the Linux application level.
+\item  Implemented an inter-process socket framework for UDP-based communication between Python and C applications.
+\end{tightemize}
+
+% Civil UAS
+\descript{Civil UAS Embedded Developer \& DevOps Engineer}
+\location{July 2018 - August 2019 | Grand Rapids, MI}
+\begin{tightemize}
+\item Developed flight and control law software for embedded application of a civil-application drone autopilot.
+\item Mined telemetry logs and analyzed flight characteristics of actual flight test data.
+\item Standardized development platform for a team of UAS developers to eliminate the ``works on my machine'' problem.
+\item  Created a continuous integration framework utilizing a Gazebo simulation environment for automated testing.
+\end{tightemize}
+
+% UI Team
+\descript{UI Developer}
+\location{July 2017 - July 2018  | Grand Rapids, MI}
+\begin{tightemize}
+\item Developed and tested the underlying mechanisms for GE's next generation FMS UI features (Ada/VectorCAST).
+\item Analyzed, verified, and validated formal test procedures and their failures for legacy FMS projects.
+\item Organized scrum development configuration for task assignment and ran daily progress reporting.
+\end{tightemize}
+
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% INTERN %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\runsubsection{GE Aviation Systems}
+\descript{| Infra-Engineering Co-op/Intern }
 \location{August 2013 - August 2016 (Rotational) | Grand Rapids, MI}
 
 % Spotfire Dashboard
 \descript{Analytics Research and Solutions Engineer}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightitemize}
-\item  Generated, validated, and provided datasets to quantify and indicate \textbf{First Time Yield}, Nonconformances, Scrap and Rework, and Out of Box Failures to be reported via \textbf{Spotfire} visualization dashboards.
-\item Identified issues within Electronics Value Stream sites' data schemas and prescribed solutions that ranged from directly addressing processes to manually compiling reports or \textbf{PostgreSQL} queries to rectify data.
-\end{tightitemize}
+\location{}
+\begin{tightemize}
+\item  Generated, validated, and provided datasets to quantify and indicate First Time Yield, Nonconformances, Scrap and Rework, and Out of Box Failures to be reported via Spotfire visualization dashboards.
+\item Identified issues within Electronics Value Stream sites' data schemas and prescribed solutions that ranged from directly addressing processes to manually compiling reports or PostgreSQL queries to rectify data.
+\end{tightemize}
 
 % ACME Development
 \descript{Advanced Common Modeling Environment (ACME) Web Developer}
-\begin{tightitemize}
+\location{}
+\begin{tightemize}
 \item Created a web based interface for users to interact with an Enterprise Architect driven database.
-\item Increased autonomy of data entry processes and diagram creation for customer presentation through use of \textbf{jQueryUI} and \textbf{yFiles} libraries in \textbf{Javascript}.
-\item Implemented back-end server and database interfacing with \textbf{PHP} and \textbf{MSSQL} to retrieve, update, and delete entries from tables with minimal user interaction.
-\end{tightitemize}
+\item Increased autonomy of data entry processes and diagram creation for customer presentation through use of jQueryUI and yFiles libraries in Javascript.
+\item Implemented back-end server and database interfacing with PHP and MSSQL to retrieve, update, and delete entries from tables with minimal user interaction.
+\end{tightemize}
 
 % PAS Engineering
-\descript{Platform Architecture Study Lead Sub-section Engineer}
-\begin{tightitemize}
-\item Led modeling efforts on the Platform Architecture Study Internal Research and Development (IRAD) team working to create a model to migrate future era business jets from a federated platform to a General Electric designed \textbf{Integrated Modular Architecture (IMA)}. 
+%\descript{Platform Architecture Study Lead Sub-section Engineer}
+%\location{}
+%\begin{tightemize}
+% \item Led modeling efforts on the Platform Architecture Study Internal R\&D team working to create a model to migrate future era business jets from a federated platform to a GE designed Integrated Modular Architecture (IMA). 
 %\item Led model contribution for assigned subsections of the general purpose business jet model to be delivered to \textbf{Dassault Systèmes} and \textbf{Gulfstream Aerospace}.
-\item Created the model of and performed functional decomposition, software partitioning, and electrical hardware analysis of ATA 100 defined subsystems 26, 28, and 38: \textbf{Fire Protection, Fuel System, and Water and Waste}.
-%\item Performed functional decomposition, electrical hardware analysis, and software partitioning for input/output allocation to the underlying IMA.
-\end{tightitemize}
+% \item Created the model of and performed functional decomposition, software partitioning, and electrical hardware analysis of ATA 100 defined subsystems.
+%%\item Performed functional decomposition, electrical hardware analysis, and software partitioning for input/output allocation to the underlying IMA.
+% \end{tightemize}
 
-% P-8 FMS Engineering
-\descript{P-8 Poseidon Flight Management Systems Engineer}
-\begin{tightitemize}
-%\item Contributed to the design of the P-8A, P-8I, and P-8AAS flight management systems.
-\item Acted as a fully functional \textbf{Systems Engineer} and performed \textbf{Verification and Validation Testing} for the design of the P-8A, P-8I, and P-8AAS flight management systems.
-\item Utilized \textbf{Ada} programming application to \textbf{embedded systems} and scripted AutoTest execution with \textbf{Visual Basic}.
-\end{tightitemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\section{Academia Experience}
+%\runsubsection{Cornell Robot Learning Lab}
+%\descript{| Researcher}
+%\location{Jan 2014 – Jan 2015 | Ithaca, NY}
+%Worked with \textbf{\href{http://www.cs.cornell.edu/~ashesh/}{Ashesh Jain}} and %\textbf{\href{http://www.cs.cornell.edu/~asaxena/}{Prof Ashutosh Saxena}} to create %\textbf{PlanIt}, a tool which  learns from large scale user preference feedback to plan %robot trajectories in human environments.  
+%\sectionsep
+%
+%\runsubsection{Cornell Phonetics Lab}
+%\descript{| Head Undergraduate Researcher}
+%\location{Mar 2012 – May 2013 | Ithaca, NY}
+%Led the development of \textbf{QuickTongue}, the first ever breakthrough tongue-controlled %%game with \textbf{\href{http://conf.ling.cornell.edu/~tilsen/}{Prof Sam Tilsen}} to aid %in Linguistics research. 
+%\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+
+\subsection{Programming}
+\location{Most Proficient:}
+C \textbullet{} C++ \textbullet{} Bash \textbullet{} Python \textbullet{} JavaScript/jQuery \textbullet{} PHP \textbullet{} Verilog \\
+\location{Proficient:}
+Java \textbullet{} MySQL \textbullet{} PostgreSQL \textbullet{} MSSQL \textbullet{} HTML/CSS \textbullet{} Assembly \textbullet{} Ada \\
+\location{Worked With:}
+Ruby \textbullet{} Matlab \textbullet{} Android \textbullet{} \LaTeX\ \textbullet{} Visual Basic \textbullet{} Haskell \textbullet{} Scala \textbullet{} (Emacs) Lisp
+\sectionsep
+
+\subsection{Software Tools}
+AWS (Certified Cloud Practitioner) \textbullet{} Git Administration \textbullet{} Docker \textbullet{} Jenkins \textbullet{} JUnit \textbullet{} PyTest \textbullet{} Linux Applications
 
 
-
-\sectionspace % Some whitespace after the section
-
-%------------------------------------------------
-% Academia
-%------------------------------------------------
-
-\section{Academia Experience}
-
-\runsubsection{Web Programming Interface}
-\descript{| Lead Back-end Developer}
-
-\location{August 2014 – December 2014 | West Lafayette, IN}
-\begin{tightitemize}
-\item Constructed a cloud-based programming interface for the Advanced C Programming course in the Computer Engineering department.
-\item Led the development of the back-end interface created primarily in \textbf{Python} using \textbf{Apache} and \textbf{Django}.
-\end{tightitemize}
-% Under \textbf{Dr. Yung-Hsiang Lu}, worked as a team member to design a web programming interface, \textbf{SOPAD}, for the Advanced C Programming course in the Computer Engineering department. Led the development of the back-end interface created primarily in \textbf{Python} and implemented several ground-up, independent design techniques (e.g., \textbf{Sketch-to-Code}).
-
-\sectionspace % Some whitespace after the section
-
-%------------------------------------------------
-
-\runsubsection{Advanced C Programming Teaching Staff}
-\descript{| Undergraduate Teaching Assistant}
-
-\location{May 2014 – December 2015 | West Lafayette, IN}
-% \begin{tightitemize}
-% \item Reconstructed the course grading back-end through utilization of a university server to instantaneously pull, grade, and email results upon receiving submissions using \textbf{Bash}.
-% %\item Instantaneously pulled from a submission respository, graded the assignment, and emailed feedback to the submitting student using Bash.
-% %\item Assisted Dr. Alexander Quinn and Dr. Yung-Hsiang Lu in course administration and oversaw grading as well as lab hours.
-% \end{tightitemize}
-% % Led the development of a reconstructed back-end for the class through utilization of a university surver to instantaneously pull from a submission repository, grade an assignment, and email feedback to a student using Bash. Assisted \textbf{Dr. Alexander Quinn} and \textbf{Dr. Yung-Hsiang Lu} in course administration and oversaw grading as well as lab hours.
-
-\sectionspace % Some whitespace after the section
-
-%----------------------------------------------------------------------------------------
-
-\end{minipage} % The end of the right column
-
-\end{document}
+%\end{minipage} 
+\end{document}  \documentclass[]{article}
